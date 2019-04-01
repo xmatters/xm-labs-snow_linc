@@ -56,3 +56,5 @@ If for some reason the integration isn't behaving as intended (or expected) plea
 1. The data handler script include to verify if the record from the table is passing the condition rules and being properly bundled up and sent to the outbound queue table.
 
 Then go to the outbound queue table and verify that the record is being generated. If it is being generated but you aren't seing the event trigger in xmatters or the activity stream add log statements in the 2nd script include: xM REST Util.
+
+To test the integration, once all configuration is complete create a record on the table you are integrating with and see if an event is fired.
