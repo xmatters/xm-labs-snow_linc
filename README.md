@@ -46,7 +46,9 @@ Once imported, verify by going to remote update sets and making sure the applica
 2. Go to the condition table and create a new record with the following values:
    
    2a. The table in you just created the BR on as the value for the table field
+   
    2b. The endpoint URL from xMatters that you will be sending the payload to.
+   
    2c. Build out the condition to your own specification (what does the record need to have on it to trigger an xMatters event)
    
 3. That's it! Fire a test! Create or update a record on the table you are integrating with and watch the activity stream on the xMatters side. From this point customize the form / properties / logic from the xMatters side.
