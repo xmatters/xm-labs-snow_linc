@@ -10,7 +10,7 @@ This is an update set in service now that will allow for quick and easy set up o
 * xMatters account - If you don't have one, [get one](https://www.xmatters.com)!
 
 # Files
-* [xm_Link_update_set.xml] - This is the xml update set that needs to be imported into your service now instance.
+* [xm_Link_update_set.xml](xm_Link_update_set.xml) - This is the xml update set that needs to be imported into your service now instance.
 
 # How it works
 This integration uses:
