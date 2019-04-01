@@ -20,17 +20,17 @@ This integration uses:
 
 ### Table 1: xM Condition - 
 This table is where you will build conditions out and point to a table you want to create xMatters notifications off of. That table will also need a business rule (see example business rule in the application and copy that business rule onto whatever table you want to be watching)
-## Table 2: xM Outbound Queue - 
+### Table 2: xM Outbound Queue - 
 This table is where the paylaod is sent when it is ready to be sent to xMatters. an ASYNC business rule will pick it up on insert and send the payload (flat record off the table we are watching) to the specified xMatters endpoint.
 
-## Script Include 1: xM Condition Processor - 
+### Script Include 1: xM Condition Processor - 
 Code for processing the record and building the payload to be send to the outbound queue table.
-## Script Include 2: xM Send Payload - 
+### Script Include 2: xM Send Payload - 
 buildes a ServiceNow Rest Message v2 object and sends the payload to xMatters.
 
-## Business rule 1: 
+### Business rule 1: 
 ASYNC business rule running on the outbound queue table that triggers the Send Paylaod script include.
-## Business rule 2,3,4,...: 
+### Business rule 2,3,4,...: 
 The business rule that goes on whatever table you want to be watching. See example business rule included in the update set and copy exactly onto whatever table you want.
 
 # Installation
