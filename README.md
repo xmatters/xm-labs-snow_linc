@@ -41,22 +41,24 @@ Once imported, verify by going to remote update sets and making sure the applica
 1. Go to the table you want to integrate with and add a business rule and create a business rule with the following script:
    1a. new x_273338_xm_linc.Data_Handler_Util().processRecord(current);
    
-1.5 Make sure you have an inbound integration set up in xmatters and your endpoint URL handy for setting up the service now side of things. (use URL auth)
+1.5 Make sure you have an inbound integration set up in xmMatters and your endpoint URL handy for setting up the service now side of things. (use URL auth)
 
 2. Go to the condition table and create a new record with the following values:
-   2a. The table in you just created the BR on as the value for the table field
-   2b. The endpoint URL from xmatters that you will be sending the payload to.
-   2c. Build out the condition to your own specification (what does the record need to have on it to trigger an xmatters event)
    
-3. That's it! Fire a test! Create or update a record on the table you are integrating with and watch the activity stream on the xmatters side. From this point customize the form / properties / logic from the xmatters side.
+   2a. The table in you just created the BR on as the value for the table field
+   2b. The endpoint URL from xMatters that you will be sending the payload to.
+   2c. Build out the condition to your own specification (what does the record need to have on it to trigger an xMatters event)
+   
+3. That's it! Fire a test! Create or update a record on the table you are integrating with and watch the activity stream on the xMatters side. From this point customize the form / properties / logic from the xMatters side.
 
-# Testing and troubleshooting
-If for some reason the integration isn't behaving as intended (or expected) please add log statements to any / all the scripts to check the values that are being sent / passed on. Start with:
+# Troubleshooting
+If the integration isn't behaving as intended (or expected) please add log statements to any / all the scripts to check the values that are being sent / passed on. Start with:
 
 1. The data handler script include to verify if the record from the table is passing the condition rules and being properly bundled up and sent to the outbound queue table.
 
-Then go to the outbound queue table and verify that the record is being generated. If it is being generated but you aren't seing the event trigger in xmatters or the activity stream add log statements in the 2nd script include: xM REST Util.
+Then go to the outbound queue table and verify that the record is being generated. If it is being generated but you aren't seing the event trigger in xMatters or the activity stream add log statements in the 2nd script include: xM REST Util.
 
+# Testing
 To test the integration, once all configuration is complete create a record on the table you are integrating with and see if an event is fired.
 
 Also please feel free to reach out to me if you have any questions: bguerre@xmatters.com
