@@ -35,7 +35,7 @@ The business rule that goes on whatever table you want to be watching. See examp
 
 # Installation
 Import xml on any list view in service now. Select the update set file from this repository (download it first).
-Once imported, verify by going to remote update sets and making sure the application is there. 
+Once imported, verify by going to remote update sets and making sure the application is there. Please see the service now documentation for previewing and committing an update set: https://docs.servicenow.com/bundle/london-application-development/page/build/system-update-sets/task/t_PreviewARemoteUpdateSet.html 
 
 # Setting up your custom integration
 1. Go to the table you want to integrate with and add a business rule and create a business rule with the following script:
@@ -49,3 +49,10 @@ Once imported, verify by going to remote update sets and making sure the applica
    2c. Build out the condition to your own specification (what does the record need to have on it to trigger an xmatters event)
    
 3. That's it! Fire a test! Create or update a record on the table you are integrating with and watch the activity stream on the xmatters side. From this point customize the form / properties / logic from the xmatters side.
+
+# Testing and troubleshooting
+If for some reason the integration isn't behaving as intended (or expected) please add log statements to any / all the scripts to check the values that are being sent / passed on. Start with:
+
+1. The data handler script include to verify if the record from the table is passing the condition rules and being properly bundled up and sent to the outbound queue table.
+
+Then go to the outbound queue table and verify that the record is being generated. If it is being generated but you aren't seing the event trigger in xmatters or the activity stream add log statements in the 2nd script include: xM REST Util.
