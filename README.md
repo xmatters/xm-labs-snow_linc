@@ -58,3 +58,5 @@ If for some reason the integration isn't behaving as intended (or expected) plea
 Then go to the outbound queue table and verify that the record is being generated. If it is being generated but you aren't seing the event trigger in xmatters or the activity stream add log statements in the 2nd script include: xM REST Util.
 
 To test the integration, once all configuration is complete create a record on the table you are integrating with and see if an event is fired.
+
+Also please feel free to reach out to me if you have any questions: bguerre@xmatters.com
