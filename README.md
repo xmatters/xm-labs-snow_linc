@@ -18,7 +18,7 @@ This integration uses:
  - 2 script includes
  - 2 (or more) business rules depending. 
 
-## Table 1: xM Condition - 
+### Table 1: xM Condition - 
 This table is where you will build conditions out and point to a table you want to create xMatters notifications off of. That table will also need a business rule (see example business rule in the application and copy that business rule onto whatever table you want to be watching)
 ## Table 2: xM Outbound Queue - 
 This table is where the paylaod is sent when it is ready to be sent to xMatters. an ASYNC business rule will pick it up on insert and send the payload (flat record off the table we are watching) to the specified xMatters endpoint.
