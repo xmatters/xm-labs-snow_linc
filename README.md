@@ -2,7 +2,9 @@
 This is an update set in service now that will allow for quick and easy set up of custom integrations with any table in service now.
 
 <kbd>
-  <img src="https://github.com/xmatters/xMatters-Labs/raw/master/media/disclaimer.png">
+<a href="https://support.xmatters.com/hc/en-us/community/topics">
+   <img src="https://github.com/xmatters/xMatters-Labs/raw/master/media/disclaimer.png">
+</a>
 </kbd>
 
 # Pre-Requisites
@@ -39,9 +41,9 @@ Once imported, verify by going to remote update sets and making sure the applica
 
 # Setting up your custom integration
 1. Go to the table you want to integrate with and add a business rule and create a business rule with the following script:
-   1a. new x_273338_xm_linc.Data_Handler_Util().processRecord(current);
+   1a. `new x_273338_xm_linc.Data_Handler_Util().processRecord(current);`
    
-1.5 Make sure you have an inbound integration set up in xmMatters and your endpoint URL handy for setting up the service now side of things. (use URL auth)
+2. Make sure you have an inbound integration set up in xmMatters and your endpoint URL handy for setting up the service now side of things. (use URL auth)
 
 2. Go to the condition table and create a new record with the following values:
    
@@ -62,5 +64,3 @@ Then go to the outbound queue table and verify that the record is being generate
 
 # Testing
 To test the integration, once all configuration is complete create a record on the table you are integrating with and see if an event is fired.
-
-Also please feel free to reach out to me if you have any questions: bguerre@xmatters.com
